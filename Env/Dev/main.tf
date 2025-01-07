@@ -30,3 +30,9 @@ module "Bastions" {
   main_Bastons =var.Bastions1
   
 }
+
+module "Keyvault" {
+  depends_on = [ module.resource ]
+  source = "../../Modules/6_Azure_Keyvault"
+  azureKV = var.mod_azureKV
+}

@@ -3,3 +3,4 @@ variable "var_Stg_Practice" {}
 variable "var_container_Practice" {}
 variable "Virtual_network1" {}
 variable "Bastions1" {}
+variable "mod_azureKV" {}
