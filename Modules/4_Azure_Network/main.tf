@@ -8,7 +8,7 @@ for_each = var.Virtual_Network
 dynamic "subnet" {
     for_each = each.value.var_subnet
     content {
-    name             = subnet.value.name
+    name             = subnet.value.subnet_name
     address_prefixes = subnet.value.address_prefixes
     }
     }

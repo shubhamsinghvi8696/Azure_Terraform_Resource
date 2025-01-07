@@ -6,7 +6,7 @@ variable "Virtual_Network" {
     address_space       = list(string),
 
     var_subnet = map(object({
-      name             = string,
+      subnet_name             = string,
       address_prefixes = list(string),
     }))
 

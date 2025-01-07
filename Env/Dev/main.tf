@@ -23,3 +23,10 @@ module "Network" {
   Virtual_Network = var.Virtual_network1
   
 }
+
+module "Bastions" {
+  depends_on = [ module.resource ]
+  source = "../../Modules/5_Azure_Bastions"
+  main_Bastons =var.Bastions1
+  
+}
