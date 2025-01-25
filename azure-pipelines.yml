@@ -1,4 +1,16 @@
-trigger:
-pool:
+trigger: none
+
+pool: Git_Agent_Pool
+
 stages:
-  - 
+- stage: terraforminitplan
+  displayName:  terraform installer
+  jobs:
+   - job: setupterraforminstaller
+     displayName: terraform installer
+     steps:
+      - task: TerraformInstaller@1
+        inputs:
+          terraformVersion: 'latest'
+     
+          
