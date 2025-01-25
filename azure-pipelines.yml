@@ -12,5 +12,14 @@ stages:
       - task: TerraformInstaller@1
         inputs:
           terraformVersion: 'latest'
-     
-          
+
+      - task: TerraformTaskV4@4
+        inputs:
+          provider: 'azurerm'
+          command: 'init'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/prod/QA'
+          backendServiceArm: 'Azure_git_Connections'
+          backendAzureRmResourceGroupName: 'YAML_Git_Resaources'
+          backendAzureRmStorageAccountName: 'stgyaml'
+          backendAzureRmContainerName: 'test'
+          backendAzureRmKey: 'terraform.tfvars'
